@@ -1,10 +1,11 @@
-.App {
-  text-align: center;
+:root {
+  --background-color: #FAFAFA;
+  --header-font: #3A4895;
+  --cart-color: #E4310B;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +33,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
