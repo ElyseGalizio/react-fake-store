@@ -1,0 +1,13 @@
+.product-card-container {
+    display: flex;
+}
+
+.product-card {
+    width: 183px;
+    height: 248px;
+}
+
+.product-card-image {
+    width: 60%;
+
+}
