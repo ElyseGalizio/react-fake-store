@@ -5,9 +5,17 @@
 .product-card {
     width: 183px;
     height: 248px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.product-card-image-container {
+    border: 1px solid #EFEFEF;
+    border-radius: 8px;
+    height: 153px;
+    width: 151px;
 }
 
 .product-card-image {
     width: 60%;
-
 }

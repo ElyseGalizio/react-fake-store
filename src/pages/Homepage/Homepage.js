@@ -10,7 +10,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 
 export default function Homepage() {
     const [products, setProducts] = React.useState([]);
-    const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
+    // const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
 
     React.useEffect(() => {
         fetchProducts();
@@ -26,23 +26,23 @@ export default function Homepage() {
     //         .then(response => console.log(response.data))
     // }
 
-    function filterProducts(products, filterQuery) {
-        if (filterQuery === 'electronics') {
-            return console.log(products.filter(item => item.category === 'electronics'))
-        }
-    }
+    // function filterProducts(products, filterQuery) {
+    //     if (filterQuery === 'electronics') {
+    //         return console.log(products.filter(item => item.category === 'electronics'))
+    //     }
+    // }
 
     return (
         <div className="homepage-container">
             <div>
                 <button value='all-products'>All</button>
-                <button onClick={(event) => setFilterProductsValue(event.target.value)} value='electronics'>Electronics</button>
+                <button value='electronics'>Electronics</button>
                 <button value='jewelry'>Jewelry</button>
                 <button value='mens-clothing'>Men's Clothing</button>
                 <button value='womens-clothing'>Women's Clothing</button>
             </div>
             <div className="homepage-product-container">
-                {filterProducts(products, filterProductsValue)?.products?.map(product => <ProductCard key={product.id} {...product} />)}
+                {products?.map(product => <ProductCard key={product.id} {...product} />)}
             </div>
         </div>
     )

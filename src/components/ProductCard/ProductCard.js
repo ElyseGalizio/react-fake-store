@@ -7,11 +7,12 @@ export default function ProductCard(props) {
         <div className="product-card-container">
             <div className="product-card">
                 <BsSuitHeart />
-                <h1>Product Card</h1>
+                <div className="product-card-image-container">
+                    <img src={props.image} className="product-card-image" />
+                </div>
                 <p>{props.title}</p>
                 <p>{props.price}</p>
                 <p>{props.category}</p>
-                <img src={props.image} className="product-card-image" />
             </div>
         </div>
     )
