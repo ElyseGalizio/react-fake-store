@@ -1,0 +1,12 @@
+.homepage-container {
+    background-color: var(--background-color);
+}
+
+.homepage-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 66px;
+    row-gap: 32px;
+    margin: 61px;
+}
