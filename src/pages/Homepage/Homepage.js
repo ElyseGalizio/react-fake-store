@@ -10,7 +10,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 
 export default function Homepage() {
     const [products, setProducts] = React.useState([]);
-    // const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
+    const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
 
     React.useEffect(() => {
         fetchProducts();
@@ -21,28 +21,36 @@ export default function Homepage() {
             .then(response => setProducts(response.data))
     }
 
-    // const fetchFilterProducts = () => {
-    //     axios.get(`https://fakestoreapi.com/products/category/${products.category}`)
-    //         .then(response => console.log(response.data))
-    // }
+    const fetchFilterProducts = () => {
+        axios.get(`https://fakestoreapi.com/products/category/${products.category}`)
+            .then(response => setFilterProductsValue(response.data))
+    }
 
-    // function filterProducts(products, filterQuery) {
-    //     if (filterQuery === 'electronics') {
-    //         return console.log(products.filter(item => item.category === 'electronics'))
-    //     }
-    // }
+    function filterProducts(products, filterQuery) {
+        if (filterQuery === 'electronics') {
+            return fetchFilterProducts(products.filter(item => item.category === 'electronics'))
+        } else if (filterQuery === 'jewelry') {
+            return console.log(products.filter(item => item.category === 'jewelry'))
+        } else if (filterQuery === 'mens-clothing') {
+            return console.log(products.filter(item => item.category === 'mens-clothing'))
+        } else if (filterQuery === 'womens-clothing') {
+            return console.log(products.filter(item => item.category === 'womens-clothing'))
+        } else if (filterQuery === 'all-products') {
+            return products
+        }
+    }
 
     return (
         <div className="homepage-container">
             <div>
-                <button value='all-products'>All</button>
-                <button value='electronics'>Electronics</button>
-                <button value='jewelry'>Jewelry</button>
-                <button value='mens-clothing'>Men's Clothing</button>
-                <button value='womens-clothing'>Women's Clothing</button>
+                <button onClick={() => setFilterProductsValue('all-products')} value='all-products'>All</button>
+                <button onClick={(event) => setFilterProductsValue(event.target.value)} value='electronics'>Electronics</button>
+                <button onClick={() => setFilterProductsValue('jewelry')} value='jewelry'>Jewelry</button>
+                <button onClick={() => setFilterProductsValue('mens-clothing')} value='mens-clothing'>Men's Clothing</button>
+                <button onClick={() => setFilterProductsValue('womens-clothing')} value='womens-clothing'>Women's Clothing</button>
             </div>
             <div className="homepage-product-container">
-                {products?.map(product => <ProductCard key={product.id} {...product} />)}
+                {filterProducts(products, filterProductsValue)?.map(product => <ProductCard key={product.id} {...product} />)}
             </div>
         </div>
     )
