@@ -21,31 +21,27 @@ export default function Homepage() {
             .then((response) => setProducts(response.data));
     };
 
-    const fetchFilterProducts = () => {
-        axios.get(`https://fakestoreapi.com/products/category/${products.category}`)
-            .then(response => setFilterProductsValue(response.data))
+    const fetchFilterProducts = (filterQuery) => {
+        axios.get(`https://fakestoreapi.com/products/category/${filterQuery}`)
+            .then(response => setProducts(response.data))
     }
 
     function filterProducts(products, filterQuery) {
         if (filterQuery === 'electronics') {
-            return fetchFilterProducts(products.filter(item => item.category === 'electronics'))
-        } else if (filterQuery === 'jewelry') {
-            return console.log(products.filter(item => item.category === 'jewelry'))
-        } else if (filterQuery === 'mens-clothing') {
-            return console.log(products.filter(item => item.category === 'mens-clothing'))
-        } else if (filterQuery === 'womens-clothing') {
-            return console.log(products.filter(item => item.category === 'womens-clothing'))
+            return products.filter((item) => item.category === 'electronics')
+        } else if (filterQuery === 'jewelery') {
+            return products.filter((item) => item.category === 'jewelery')
+        } else if (filterQuery === "men's clothing") {
+            return products.filter((item) => item.category === "men's clothing")
+        } else if (filterQuery === "women's clothing") {
+            return products.filter((item) => item.category === "women's clothing")
         } else if (filterQuery === 'all-products') {
             return products
         }
     }
     // STEP 3: setup the if statements for all of the different categories. The current
     // if statement should be correct. Now just built out the others
-    // function filterProducts(products, filterQuery) {
-    //     if (filterQuery === 'electronics') {
-    //         return console.log(products.filter(item => item.category === 'electronics'))
-    //     }
-    // }
+
 
     return (
         <div className="homepage-container">
@@ -54,9 +50,9 @@ export default function Homepage() {
             this value  in the filterProductsValue state */}
                 <button onClick={() => setFilterProductsValue('all-products')} value='all-products'>All</button>
                 <button onClick={(event) => setFilterProductsValue(event.target.value)} value='electronics'>Electronics</button>
-                <button onClick={() => setFilterProductsValue('jewelry')} value='jewelry'>Jewelry</button>
-                <button onClick={() => setFilterProductsValue('mens-clothing')} value='mens-clothing'>Men's Clothing</button>
-                <button onClick={() => setFilterProductsValue('womens-clothing')} value='womens-clothing'>Women's Clothing</button>
+                <button onClick={() => setFilterProductsValue('jewelery')} value='jewelery'>Jewelery</button>
+                <button onClick={() => setFilterProductsValue("men's clothing")} value="men's clothing">Men's Clothing</button>
+                <button onClick={() => setFilterProductsValue("women's clothing")} value="women's clothing">Women's Clothing</button>
             </div>
             <div className="homepage-product-container">
                 {/* STEP 2:  
