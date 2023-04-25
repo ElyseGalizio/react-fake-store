@@ -4,6 +4,10 @@
   --cart-color: #E4310B;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
