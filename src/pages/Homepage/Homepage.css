@@ -1,5 +1,6 @@
 .homepage-container {
     background-color: var(--background-color);
+    min-height: calc(100vh - 81px);
 }
 
 .homepage-product-container {
@@ -8,5 +9,5 @@
     justify-content: center;
     column-gap: 66px;
     row-gap: 32px;
-    margin: 61px;
+    padding: 21px 131px 69px 131px;
 }

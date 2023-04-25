@@ -3,9 +3,11 @@ import axios from "axios";
 import "./Homepage.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
-//add filter functionality to buttons
-// onClick, filter for product categories
-// make api dynamic, so that clicking on a certain button calls a certain category
+// create footer component
+// create footer branch
+// create footer
+// add Contact Us link
+// style footer and homepage, check responsiveness
 
 export default function Homepage() {
     const [products, setProducts] = React.useState([]);
