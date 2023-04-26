@@ -9,5 +9,18 @@
     justify-content: center;
     column-gap: 66px;
     row-gap: 32px;
-    padding: 21px 131px 69px 131px;
+    padding: 21px 50px 69px 50px;
+}
+
+.button-container {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.homepage-button {
+    border: none;
+    background-color: var(--background-color);
+    font-size: 20px;
+    color: var(--button-color);
+    padding: 14px;
 }

@@ -1,19 +1,20 @@
 import React from "react";
-import { BsSuitHeart } from 'react-icons/bs';
+import { BsSuitHeart, BsCurrencyEuro } from 'react-icons/bs';
 import './ProductCard.css';
 
 export default function ProductCard(props) {
     return (
-        <div className="product-card-container">
+        // <div className="product-card-container">
             <div className="product-card">
-                <BsSuitHeart />
                 <div className="product-card-image-container">
-                    <img src={props.image} className="product-card-image" />
+                    <BsSuitHeart className="heart-icon"/>
+                    <img src={props.image} className="product-card-image" alt={props.title} />
                 </div>
-                <p>{props.title}</p>
-                <p>{props.price}</p>
-                <p>{props.category}</p>
+                <p className="product-title product-info">{props.title}</p>
+                <p className="product-category product-info">{props.category.charAt(0).toUpperCase() + props.category.substring(1)}</p>
+                <p className="product-price product-info">{props.price}<BsCurrencyEuro size={12} /></p>
             </div>
-        </div>
+        // </div>
     )
 }
+ 

@@ -2,6 +2,9 @@
   --background-color: #FAFAFA;
   --header-font: #3A4895;
   --cart-color: #E4310B;
+  --button-color: #5264C3;
+  --product-primary-color: #282828;
+  --product-secondary-color: #949494;
 }
 
 * {
