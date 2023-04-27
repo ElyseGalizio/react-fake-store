@@ -1,0 +1,69 @@
+.contactus-container {
+    width: 50%;
+    height: 783px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.contactus-heading {
+    padding-top: 58px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: #282828;
+}
+
+.contactus-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 57px;
+
+}
+
+.contactus-input, textarea {
+    width: 50%;
+    margin-bottom: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--input-background-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding-left: 12px;
+    color: #FFFFFF;
+  }
+
+  .contactus-input, .contactus-button {
+    height: 41px;
+  }
+
+  textarea {
+    height: 105px;
+  }
+
+  .contactus-button {
+    width: 156px;
+    background-color: var(--button-color);
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 767px) {
+    .contactus-container {
+      height: 750px; 
+      width: 75%;
+    }
+
+    .contactus-input, textarea {
+        width: 77%;
+    }
+
+    .contactus-button {
+        width: 106px;
+    }
+  }
+  

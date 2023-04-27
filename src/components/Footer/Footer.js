@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className="footer-container">
             <p>Made with <BsSuitHeartFill size={13} /> by mimo</p>
-            <Link to='/contact' className='footer-link'>Contact Us</Link>
+            <Link to='/contactus' className='footer-link'>Contact Us</Link>
         </div>
     )
 }
