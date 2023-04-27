@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Homepage from './pages/Homepage/Homepage';
 import Footer from './components/Footer/Footer';
 import ContactUs from './pages/ContactUs/ContactUs';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Homepage />} />
+        <Route path='/details/:id' element={<ProductDetails />} />
         <Route path='/contactus' element={<ContactUs />} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
