@@ -9,7 +9,6 @@
     padding-top: 58px;
     font-size: 32px;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
     color: #282828;
 }
 
@@ -28,7 +27,6 @@
     border: none;
     border-radius: 6px;
     background-color: var(--input-background-color);
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     padding-left: 12px;
     color: #FFFFFF;
@@ -40,6 +38,7 @@
 
   textarea {
     height: 105px;
+    font-family: 'Inter', sans-serif;
   }
 
   .contactus-button {
@@ -47,7 +46,6 @@
     background-color: var(--button-color);
     border: none;
     color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
   }
