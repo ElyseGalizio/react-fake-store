@@ -85,10 +85,37 @@ h3 {
     }
 
     .product-details-description {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
     }
 
     .product-details-button {
         width: 217px;
+    }
+}
+
+@media (max-width: 428px) {
+    .product-details-container {
+        height: 632px;
+    }
+
+    .product-details-image {
+        width: 23%;
+        padding-bottom: 52px;
+    }
+
+    .product-details-title {
+        margin-bottom: 21px;
+    }
+
+    .product-details-price {
+        margin-bottom: 21px;
+    }
+
+    h3 {
+        margin-bottom: 17px;
+    }
+
+    .product-details-button {
+        width: 113px;
     }
 }

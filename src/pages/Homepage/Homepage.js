@@ -5,7 +5,6 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 
 
 // style homepage: fix product cards to grow with text
-// finish making product details page responsive with media queries
 // fix responsiveness of contact page
 // begin week 4 
 
