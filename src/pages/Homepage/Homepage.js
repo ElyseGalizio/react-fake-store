@@ -5,7 +5,8 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 
 
 // style homepage: fix product cards to grow with text
-// begin week 3 steps of project, starting at getting product details info rendered on screen 
+// fix responsiveness of contact page
+// begin week 4 
 
 export default function Homepage() {
     const [products, setProducts] = React.useState([]);
