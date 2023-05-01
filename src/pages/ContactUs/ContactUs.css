@@ -34,6 +34,10 @@
     color: #FFFFFF;
   }
 
+::placeholder {
+  color: #FFFFFF;
+}  
+
   .contactus-input, .contactus-button {
     height: 41px;
   }
@@ -52,9 +56,9 @@
     font-weight: 700;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 744px) {
     .contactus-container {
-      height: 750px; 
+      height: 783px; 
       width: 75%;
     }
 
@@ -64,6 +68,13 @@
 
     .contactus-button {
         width: 106px;
+    }
+  }
+
+  @media (max-width: 428px) {
+    .contactus-container {
+      height: 750px; 
+      width: 85%;
     }
   }
   
