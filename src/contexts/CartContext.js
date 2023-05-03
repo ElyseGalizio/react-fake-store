@@ -76,4 +76,10 @@ export default CartProvider;
 //         setIsInCart(true);
 //       }
 //     };
+// return (
+//     <button onClick={handleClick}>
+//       {isInCart ? 'Remove from cart' : 'Add to cart'}
+//     </button>
+//   );
+// }
   
