@@ -61,7 +61,8 @@ export default function Homepage() {
                 remove the word products and replace with  filterProducts function call passing through products and filterProductsValue */}
                 {products?.filter((item) =>
                     filterProductsValue !== 'all-products' ? item.category === filterProductsValue : item)
-                    .map(product => <ProductCard key={product.id} {...product} />)}
+                    .map(product => <ProductCard key={product.id} {...product} />
+                    )}
             </div>
         </div>
     )

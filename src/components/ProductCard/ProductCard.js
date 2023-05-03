@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { BsFillSuitHeartFill } from 'react-icons/bs';
 import './ProductCard.css';
 import {CartContext} from "../../contexts/CartContext";
@@ -9,6 +10,7 @@ export default function ProductCard(props) {
     const {addToCart} = React.useContext(CartContext);
 
     return (
+            <Link to={`/details/${props.id}`}>
             <div className="product-card">
                 <div className="product-card-image-container">
                     <BsFillSuitHeartFill className="heart-icon"
@@ -19,6 +21,7 @@ export default function ProductCard(props) {
                 <p className="product-category product-info">{props.category.charAt(0).toUpperCase() + props.category.substring(1)}</p>
                 <p className="product-price product-info">{props.price} €</p>
             </div>
+            </Link>
     )
 }
  
