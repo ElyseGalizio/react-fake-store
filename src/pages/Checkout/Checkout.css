@@ -1,0 +1,11 @@
+.checkout-container {
+    width: 60%;
+    height: 783px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.checkout-titles {
+    display: flex;
+    justify-content: space-around;
+}

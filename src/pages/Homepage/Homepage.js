@@ -2,11 +2,15 @@ import React, { useContext } from "react";
 import axios from "axios";
 import "./Homepage.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import CartContext from "../../contexts/CartContext";
+import {CartContext} from "../../contexts/CartContext";
 
 
 // style homepage: fix product cards to grow with text
-// begin week 4 
+// fix footer text for mobile size
+// remove from cart functionality needed on product details page
+// remove from cart functionality needed on heart on main page
+// change heart to blue if product is in cart
+// complete checkout page
 
 export default function Homepage() {
     // const { cartProducts, setCartProducts } = useContext(CartContext);

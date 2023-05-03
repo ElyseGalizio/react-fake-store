@@ -35,8 +35,6 @@ function CartProvider(props) {
         setCartProducts(cartProductsArray);
     }
 
-    
-
     return(
         <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart }}>
             {props.children}
@@ -45,3 +43,37 @@ function CartProvider(props) {
 }
 
 export default CartProvider;
+
+// function AddRemoveButton() {
+//     const [isInCart, setIsInCart] = useState(false);
+//     const [cartProducts, setCartProducts] = React.useState();
+  
+//     const handleClick = () => {
+//       if (isInCart) {
+//         const removeFromCart = (productToBeDeleted) => {
+//           let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
+//           if(!cartProductsArray) {
+//               cartProductsArray = [productToBeDeleted];
+//           } else {
+//               cartProductsArray = cartProductsArray.filter((product) => product.id !== productToBeDeleted.id);
+//           }
+//           localStorage.setItem("cartProductsArray", JSON.stringify(cartProductsArray));
+//           setCartProducts(cartProductsArray);
+//       }
+  
+//         setIsInCart(false);
+//       } else {
+//         const addToCart = (productToBeAdded) => {
+//           let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
+//           if(!cartProductsArray) {
+//               cartProductsArray = [productToBeAdded];
+//           } else {
+//               cartProductsArray = [...cartProductsArray, productToBeAdded]
+//           }
+//           localStorage.setItem("cartProductsArray", JSON.stringify(cartProductsArray));
+//           setCartProducts(cartProductsArray);
+//       }
+//         setIsInCart(true);
+//       }
+//     };
+  

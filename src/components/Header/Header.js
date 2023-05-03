@@ -14,11 +14,12 @@ export default function Header() {
             <Link to={'/'}>
                 <h1 className='header-title'>Fake Store</h1>
             </Link>
-
-            <div className='header-cart-container'>
-                <AiOutlineShoppingCart size={35} className='header-icon-cart' />
-                <div className='header-icon-number'>{cartProducts?.length || 0}</div>
-            </div>
+            <Link to={'/checkout'}>
+                <div className='header-cart-container'>
+                    <AiOutlineShoppingCart size={40} className='header-icon-cart' />
+                    <div className='header-icon-number'>{cartProducts?.length || 0}</div>
+                </div>
+            </Link>
         </div>
     )
 }

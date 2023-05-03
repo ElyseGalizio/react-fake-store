@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.header-title, a {
+.header-title {
     font-size: 24px;
     color: var(--header-font);
     margin-left: 25px;
