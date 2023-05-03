@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import "./Homepage.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import CartContext from "../../contexts/CartContext";
 
 
 // style homepage: fix product cards to grow with text
-// fix responsiveness of contact page
 // begin week 4 
 
 export default function Homepage() {
+    // const { cartProducts, setCartProducts } = useContext(CartContext);
     const [products, setProducts] = React.useState([]);
     const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
 
