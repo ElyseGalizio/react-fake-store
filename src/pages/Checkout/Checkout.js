@@ -14,11 +14,25 @@ export default function Checkout() {
                     <h1>Remove</h1>
                 </div>
                 <div>
-                    
                     <RiDeleteBin6Line />
                 </div>
 
             </div>
         </div>
     )
+
+    // return (
+    //     <div>
+    //       <h1>Shopping Cart</h1>
+    //       <div>
+    //         <h2>Products</h2>
+    //         {products.map((product) => (
+    //           <Product key={product.id} product={product} onAddToCart={addToCart} />
+    //         ))}
+    //       </div>
+    //       <div>
+    //         <Cart items={cartItems} onRemoveFromCart={removeFromCart} />
+    //       </div>
+    //     </div>
+    //   );
 }

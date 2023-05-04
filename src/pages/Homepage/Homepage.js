@@ -1,19 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import axios from "axios";
 import "./Homepage.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import {CartContext} from "../../contexts/CartContext";
 
-
-// style homepage: fix product cards to grow with text
+// create cartProductCard for checkout page
+// add removeFromCart to checkout page trash icon
 // fix footer text for mobile size
-// remove from cart functionality needed on product details page
-// remove from cart functionality needed on heart on main page
-// change heart to blue if product is in cart
 // complete checkout page
+// add popup on checkout page
 
 export default function Homepage() {
-    // const { cartProducts, setCartProducts } = useContext(CartContext);
+    
     const [products, setProducts] = React.useState([]);
     const [filterProductsValue, setFilterProductsValue] = React.useState('all-products');
 

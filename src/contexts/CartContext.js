@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
 
 export const CartContext = createContext();
 
@@ -26,11 +26,8 @@ function CartProvider(props) {
         console.log(productToBeDeleted)
 
         let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
-        if(!cartProductsArray) {
-            cartProductsArray = [productToBeDeleted];
-        } else {
             cartProductsArray = cartProductsArray.filter((product) => product.id !== productToBeDeleted.id);
-        }
+
         localStorage.setItem("cartProductsArray", JSON.stringify(cartProductsArray));
         setCartProducts(cartProductsArray);
     }
@@ -44,42 +41,3 @@ function CartProvider(props) {
 
 export default CartProvider;
 
-// function AddRemoveButton() {
-//     const [isInCart, setIsInCart] = useState(false);
-//     const [cartProducts, setCartProducts] = React.useState();
-  
-//     const handleClick = () => {
-//       if (isInCart) {
-//         const removeFromCart = (productToBeDeleted) => {
-//           let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
-//           if(!cartProductsArray) {
-//               cartProductsArray = [productToBeDeleted];
-//           } else {
-//               cartProductsArray = cartProductsArray.filter((product) => product.id !== productToBeDeleted.id);
-//           }
-//           localStorage.setItem("cartProductsArray", JSON.stringify(cartProductsArray));
-//           setCartProducts(cartProductsArray);
-//       }
-  
-//         setIsInCart(false);
-//       } else {
-//         const addToCart = (productToBeAdded) => {
-//           let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
-//           if(!cartProductsArray) {
-//               cartProductsArray = [productToBeAdded];
-//           } else {
-//               cartProductsArray = [...cartProductsArray, productToBeAdded]
-//           }
-//           localStorage.setItem("cartProductsArray", JSON.stringify(cartProductsArray));
-//           setCartProducts(cartProductsArray);
-//       }
-//         setIsInCart(true);
-//       }
-//     };
-// return (
-//     <button onClick={handleClick}>
-//       {isInCart ? 'Remove from cart' : 'Add to cart'}
-//     </button>
-//   );
-// }
-  

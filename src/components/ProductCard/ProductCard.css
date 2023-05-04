@@ -8,7 +8,7 @@
 .product-card-image-container {
     border: 1px solid #EFEFEF;
     border-radius: 8px;
-    height: 153px;
+    height: auto;
     width: 151px;
     margin-top: 16px;
     margin-left: 16px;
@@ -27,8 +27,12 @@
     color: #e7e7e7;
 }
 
+.heart-icon-clicked {
+    color: var(--header-font);
+}
+
 .product-card-image {
-    width: 60%;
+    width: 50%;
 }
 
 .product-info {
