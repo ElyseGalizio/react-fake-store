@@ -61,6 +61,12 @@
     right: 25px;
 }
 
+.checkout-empty-cart-notice {
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 30px;
+}
+
 .modal-text-container {
     display: flex;
     flex-direction: column;

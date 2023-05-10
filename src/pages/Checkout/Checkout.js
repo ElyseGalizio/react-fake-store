@@ -66,7 +66,7 @@ export default function Checkout() {
                     </Modal>
                     </>
                     :
-                    <h1>There are no products in the cart.</h1>
+                    <h1 className="checkout-empty-cart-notice">There are no products in the cart.</h1>
                     }
             </div>
         </div>
