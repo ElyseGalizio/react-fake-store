@@ -34,6 +34,8 @@ export default function Checkout() {
     return (
         <div className="homepage-container">
             <div className="checkout-container">
+                {cartProducts?.length ? 
+                <>
                 <div className="checkout-container-header">
                     <h1 className="checkout-h1 checkout-item">Item</h1>
                     <div className="checkout-blank-div"></div>
@@ -62,6 +64,10 @@ export default function Checkout() {
                     </Link>
                     </div>
                     </Modal>
+                    </>
+                    :
+                    <h1>There are no products in the cart.</h1>
+                    }
             </div>
         </div>
     )

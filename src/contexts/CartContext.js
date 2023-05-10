@@ -32,7 +32,6 @@ function CartProvider(props) {
     }
 
     const checkoutEmptyCart = () => {
-        let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
         localStorage.setItem("cartProductsArray", JSON.stringify([]));
         setCartProducts([]);
     }

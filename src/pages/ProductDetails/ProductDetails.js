@@ -24,7 +24,7 @@ export default function ProductDetails () {
                 <img src={productDetails?.image} className='product-details-image' alt={productDetails?.title} />
                 <div className='product-details'>
                     <h2 className='product-details-title'>{productDetails?.title}</h2>
-                    <p className='product-details-price'>{productDetails?.price} €</p>
+                    <p className='product-details-price'>{productDetails?.price.toFixed(2)} €</p>
                     <h3>Description</h3>
                     <p className='product-details-description'>{productDetails?.description}</p>
                     {!cartProducts?.find(item => item.id === productDetails?.id) ? 

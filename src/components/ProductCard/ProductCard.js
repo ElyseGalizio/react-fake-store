@@ -20,9 +20,9 @@ export default function ProductCard(props) {
                     <img src={props.image} className="product-card-image" alt={props.title} />
                 </Link>
                 </div>
-                <p className="product-title product-info">{props.title.slice(0,22)}</p>
+                <p className="product-title product-info">{props.title.split(' ').slice(0,5).join(' ')}</p>
                 <p className="product-category product-info">{props.category.charAt(0).toUpperCase() + props.category.substring(1)}</p>
-                <p className="product-price product-info">{props.price} €</p>
+                <p className="product-price product-info">{props.price.toFixed(2)} €</p>
         </div>
     )
 }
