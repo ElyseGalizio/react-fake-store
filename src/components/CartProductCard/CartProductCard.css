@@ -1,6 +1,7 @@
 .cart-product-card {
     display: flex;
     justify-content: space-around;
+    /* Make sure to use the css variables */
     border-bottom: solid 2px #d9d9d9;
     margin-top: 25px;
     padding-bottom: 18px;

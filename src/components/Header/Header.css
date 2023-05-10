@@ -16,6 +16,7 @@
     text-decoration: none;
 }
 
+/* Good use of relative and absolute  */
 .header-cart-container {
     position: relative;
 }
