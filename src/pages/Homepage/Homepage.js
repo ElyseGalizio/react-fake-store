@@ -3,10 +3,9 @@ import axios from "axios";
 import "./Homepage.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
-// create cartProductCard for checkout page
-// add removeFromCart to checkout page trash icon
-// fix footer text for mobile size
-// complete checkout page
+
+
+
 // add popup on checkout page
 
 export default function Homepage() {

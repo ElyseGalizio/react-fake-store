@@ -1,38 +1,68 @@
 import React, {useContext} from "react";
 import { CartContext } from "../../contexts/CartContext";
+import Modal from 'react-modal';
 import './Checkout.css';
-import {RiDeleteBin6Line} from 'react-icons/ri';
+import CartProductCard from "../../components/CartProductCard/CartProductCard";
+import { Link } from "react-router-dom";
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      width: '65%',
+      height: '536px',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
 
 export default function Checkout() {
+
+    const {cartProducts, checkoutEmptyCart} = useContext(CartContext);
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+      }
+
+      function closeModal() {
+        setIsOpen(false);
+        checkoutEmptyCart();
+      }
+
     return (
         <div className="homepage-container">
             <div className="checkout-container">
-                <div className="checkout-titles">
-                    <h1>Item</h1>
-                    <h1>Price</h1>
-                    <h1>Quantity</h1>
-                    <h1>Remove</h1>
+                <div className="checkout-container-header">
+                    <h1 className="checkout-h1 checkout-item">Item</h1>
+                    <div className="checkout-blank-div"></div>
+                    <h1 className="checkout-h1 checkout-price">Price</h1>
+                    <h1 className="checkout-h1">Quantity</h1> 
+                    <h1 className="checkout-h1 check-out-remove">Remove</h1>
                 </div>
-                <div>
-                    <RiDeleteBin6Line />
+                    {cartProducts?.map(product => 
+                    <CartProductCard key={product.id} {...product} />)}
+                <div className="checkout-total">
+                    <h1>Total</h1>
+                    <h1>{cartProducts?.reduce((acc, curr) => acc + curr.price, 0)} €
+                    </h1>
                 </div>
-
+                    <button className="checkout-button" onClick={openModal}>Checkout</button>
+                    <Modal 
+                        isOpen={modalIsOpen}
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal">
+                        <div className="modal-text-container">
+                        <p className="checkout-modal-text">Your order was successful!</p>
+                        <p className="checkout-modal-text">Check your email for the order confirmation. Thank you for shopping with Fake Store!</p>
+                    <Link to='/'>
+                    <button onClick={closeModal} className="modal-button">Return to Main Page</button>
+                    </Link>
+                    </div>
+                    </Modal>
             </div>
         </div>
     )
-
-    // return (
-    //     <div>
-    //       <h1>Shopping Cart</h1>
-    //       <div>
-    //         <h2>Products</h2>
-    //         {products.map((product) => (
-    //           <Product key={product.id} product={product} onAddToCart={addToCart} />
-    //         ))}
-    //       </div>
-    //       <div>
-    //         <Cart items={cartItems} onRemoveFromCart={removeFromCart} />
-    //       </div>
-    //     </div>
-    //   );
 }

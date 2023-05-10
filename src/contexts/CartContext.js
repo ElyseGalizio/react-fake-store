@@ -23,7 +23,6 @@ function CartProvider(props) {
     }
 
     const removeFromCart = (productToBeDeleted) => {
-        console.log(productToBeDeleted)
 
         let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
             cartProductsArray = cartProductsArray.filter((product) => product.id !== productToBeDeleted.id);
@@ -32,8 +31,14 @@ function CartProvider(props) {
         setCartProducts(cartProductsArray);
     }
 
+    const checkoutEmptyCart = () => {
+        let cartProductsArray = JSON.parse(localStorage.getItem('cartProductsArray'));
+        localStorage.setItem("cartProductsArray", JSON.stringify([]));
+        setCartProducts([]);
+    }
+
     return(
-        <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart }}>
+        <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart, checkoutEmptyCart }}>
             {props.children}
         </CartContext.Provider>
     )

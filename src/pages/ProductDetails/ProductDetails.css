@@ -95,7 +95,8 @@ h3 {
 
 @media (max-width: 428px) {
     .product-details-container {
-        height: 632px;
+        height: auto;
+        padding: 48px 0;
     }
 
     .product-details-image {

@@ -12,3 +12,11 @@
     text-decoration: none;
     color: #fcfcfc;
 }
+
+@media (max-width: 428px) {
+    .footer-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        line-height: 25px;
+    }
+}

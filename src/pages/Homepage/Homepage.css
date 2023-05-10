@@ -1,6 +1,7 @@
 .homepage-container {
     background-color: var(--background-color);
     min-height: calc(100vh - 81px);
+    padding-bottom: 74px;
 }
 
 .homepage-product-container {
