@@ -25,3 +25,15 @@
     color: var(--button-color);
     padding: 14px;
 }
+
+@media (max-width: 428px) {
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .homepage-button {
+        padding: 2px;
+    }
+}
